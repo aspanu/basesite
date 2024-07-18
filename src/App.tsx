@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import ProjectList from './components/ProjectList';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <header className="header">
+        <div className="container">
+          <h1>My Landing Page</h1>
+        </div>
+      </header>
+      <main>
+        <section className="hero">
+          <div className="container">
+            <h2>Welcome to My Projects</h2>
+            <p>Here you can find a list of my latest projects.</p>
+          </div>
+        </section>
+        <ProjectList />
+      </main>
+      <footer className="footer">
+        <div className="container">
+          <p>&copy; 2024 My Landing Page. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
 
-export default App
+export default App;
