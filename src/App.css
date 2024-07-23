@@ -1,116 +1,125 @@
 /* Global Styles */
-body,
-html {
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9f9f9;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Container */
+/* Ensure full height for the app container */
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Header */
 .header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 1rem 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
 }
 
 /* Hero Section */
 .hero {
-  background-color: #fff;
-  padding: 3rem 0;
+  background-color: #f9f9f9;
+  padding: 5rem 0;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #eaeaea;
 }
 
 .hero h2 {
   margin: 0 0 1rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #444;
 }
 
 .hero p {
   margin: 0;
   font-size: 1.25rem;
+  color: #666;
 }
 
-/* Project List */
-.project-list {
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.project-list h2 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-.projects {
+/* Main */
+main {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.project-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  padding: 1.5rem;
-  flex-basis: calc(33% - 2rem);
-  text-align: left;
-  transition: transform 0.2s ease-in-out;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
-.project-card h3 {
-  margin-top: 0;
-  font-size: 1.5rem;
-}
-
-.project-card p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.project-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.project-link:hover {
-  background-color: #45a049;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Footer */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+  padding: 2rem 0;
   text-align: center;
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  margin: 0 0.5rem;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: #333;
 }
 
 .footer p {
   margin: 0;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .project-card {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 0.5rem 0;
+  }
 }

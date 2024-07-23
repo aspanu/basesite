@@ -1,10 +1,11 @@
 import React from 'react';
 import ProjectList from './components/ProjectList';
+import Footer from './components/Footer';
 import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="app">
+    <div className="app" id="root">
       <header className="header">
         <div className="container">
           <h1>My Landing Page</h1>
@@ -17,13 +18,11 @@ const App: React.FC = () => {
             <p>Here you can find a list of my latest projects.</p>
           </div>
         </section>
-        <ProjectList />
-      </main>
-      <footer className="footer">
         <div className="container">
-          <p>&copy; 2024 My Landing Page. All rights reserved.</p>
+          <ProjectList />
         </div>
-      </footer>
+      </main>
+      <Footer />
     </div>
   );
 };
