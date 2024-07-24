@@ -6,7 +6,7 @@ import './Footer.css';
 const Footer: React.FC = () => {
     return (
         <footer className="footer">
-            <div className="container">
+            <div className="footer-container">
                 <p className="footer-message">
                     Crafted with love by{' '}
                     <a href="https://github.com/aspanu" target="_blank" rel="noopener noreferrer" className="footer-link">

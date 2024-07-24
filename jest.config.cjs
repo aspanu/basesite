@@ -3,11 +3,11 @@ module.exports = {
     testEnvironment: 'jest-environment-jsdom',
     setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
     moduleNameMapper: {
-        '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
+        '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+        '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/src/__tests__/mocks/fileMock.js'
     },
-    globals: {
-        'ts-jest': {
-            tsconfig: 'tsconfig.jest.json'
-        }
-    }
+    testPathIgnorePatterns: ['<rootDir>/src/__tests__/mocks/'],
+    transform: {
+        '^.+\\.tsx?$': ['ts-jest', 'tsconfig.jest.json'],
+    },
 };
